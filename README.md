@@ -39,3 +39,14 @@ file name. `install.sh` reads the name from the file, so keep `--name` on its ow
   Claude Code never remembers trust for `~`. Point the workspace at a trusted project folder.
 - `--time` with a preset can land an hour off around daylight-saving changes; a cron trigger with
   `--timezone` is exact. Check `orca automations list` after creating one.
+
+## Commits
+
+Conventional Commits for every commit subject, branch and PR title: `<type>(<scope>): <description>`.
+
+- `type` is one of `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`,
+  `revert`. Use `docs`, never `doc`.
+- `scope` is the bot, automation or area the change touches (`install`, a bot or automation name).
+  Leave it out when the change spans several.
+- The description is lower case and imperative, with no trailing period.
+- Branches are `<type>/<short-kebab-slug>`. No agent attribution trailers or footers.
